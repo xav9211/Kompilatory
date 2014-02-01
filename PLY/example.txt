@@ -1,0 +1,48 @@
+float a = 3.2, b = 2.1, c = 0.4;
+int z = 4;
+string s = "sas";
+
+int gcd(int m, int n) {
+
+int res = 0;
+if (m!=n) {
+    z = a*b;
+    if (m > n) 
+        res = gcd(m-n/3, n);
+    else
+        res = gcd(n-m, m);
+}
+else
+    res = m;
+
+print res;
+return res;
+}
+
+float dup(int m, int n) {
+
+int res = 0;
+int res = 2;
+if (m!=n) {
+    if (m > n)
+        res = gcd(m-n, n);
+    else
+        res = gcd(n-m, m);
+}
+else
+    res = m;
+
+print res;
+return res;
+}
+while(a >= b ) {
+    a = 1/2*(a+b/a);
+    z = 4 * 3.4;
+    f = 1/2*(a+b/a);
+    d = 1/2*(a+b/a);
+
+}
+
+repeat
+    a=a+b;
+until a;

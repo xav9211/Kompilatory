@@ -1,10 +1,5 @@
-
 import ply.lex as lex
 
-class Token(object):
-    def __init__(self, type, value):
-        self.type = type
-        self.value = value
 
 class Scanner(object):
 
@@ -74,39 +69,33 @@ class Scanner(object):
 
   def t_FLOAT(self,t):
       r"\d+(\.\d*)|\.\d+"
-      return Token('FLOAT', t)
+      t.value = (t.value, "float")
+      return t
 
   def t_INTEGER(self,t):
       r"\d+"
-      return Token('INTEGER', t)
+      t.value = (t.value, "int")
+      return t
 
   def t_STRING(self,t):
       r'\"([^\\\n]|(\\.))*?\"'
-      return Token('STRING', t)
+      t.value = (t.value, "string")
+      return t
 
-  def t_LE(self, t):
-      r"<="
-      return Token('LE', t)
+  t_LE = r"<="
 
-  def t_GE(self, t):
-      r">="
-      return Token('GE', t)
+  t_GE = r">="
 
-  def t_EQ(self, t):
-      r"=="
-      return Token('EQ', t)
+  t_EQ = r"=="
 
-  def t_NEQ(self, t):
-      r"!="
-      return Token('NEQ', t)
+  t_NEQ = r"!="
+
 
   def t_TYPE(self,t):
       r"\b(int|float|string)\b"
-      return Token('TYPE', t)
+      return t
 
   def t_ID(self,t):
       r"[a-zA-Z_]\w*"
       t.type = Scanner.reserved.get(t.value, 'ID')
       return t
-
-

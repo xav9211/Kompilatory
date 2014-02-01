@@ -1,0 +1,12 @@
+!SESSION 2014-01-31 18:21:30.825 -----------------------------------------------
+eclipse.buildId=debbuild
+java.version=1.7.0_45
+java.vendor=Oracle Corporation
+BootLoader constants: OS=linux, ARCH=x86_64, WS=gtk, NL=en_US
+Command-line arguments:  -data /home/xav92/Programming/Kompilatory/Kompilatory/PLY -os linux -ws gtk -arch x86_64
+
+!ENTRY org.erlide.core 1 0 2014-01-31 18:21:35.733
+!MESSAGE Erlide log is in /home/xav92/Programming/Kompilatory/Kompilatory/PLY
+
+!ENTRY org.erlide.core 1 0 2014-01-31 18:21:35.745
+!MESSAGE *** starting Erlide v0.24.2.201312111707 (core=0.24.1.201312111707) *** (UTF-8) 
